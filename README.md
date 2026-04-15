@@ -1,87 +1,113 @@
+
+
 # Linear Regression (Gradient Descent)
 
 ## Overview
 
-This project implements **Linear Regression from scratch using Gradient
-Descent** to predict a target value from a single feature. The goal is
-to understand how linear regression works without using machine learning
-libraries.
+This project implements **Linear Regression from scratch using Gradient Descent** to predict a target value from a single feature. The goal is to understand how linear regression works without using machine learning libraries.
+
+---
 
 ## Dataset
 
 The dataset contains two columns:
 
--   **features** → input variable x
--   **labels** → target variable y
+* **features** → input variable ( x )
+* **labels** → target variable ( y )
 
 Example:
 
-  features   labels
-  ---------- --------
-  0.58       4.09
-  0.00       0.19
-  -0.47      -3.95
+| features | labels |
+| -------- | ------ |
+| 0.58     | 4.09   |
+| 0.00     | 0.19   |
+| -0.47    | -3.95  |
+
+---
 
 ## Model
 
-The model learns a linear relationship between the feature and the
-label:
+The model learns a linear relationship between the feature and the label:
 
-y_hat = w\*x + b
+$$
+\hat{y} = wx + b
+$$
 
-To simplify calculations, the bias is added as a column of ones in the
-feature matrix:
+To simplify calculations, the bias is added as a column of ones:
 
-X = \[1, x\]
+$$
+X = [1, x]
+$$
 
 So the prediction becomes:
 
-y_hat = Xw
+$$
+\hat{y} = Xw
+$$
+
+---
 
 ## Cost Function
 
 The model is trained by minimizing the Mean Squared Error:
 
-J(w) = (1/(2m)) \* sum((y_hat - y)\^2)
+$$
+J(w) = \frac{1}{2m} \sum (\hat{y} - y)^2
+$$
 
-where m is the number of training samples.
+where ( m ) is the number of training samples.
+
+---
 
 ## Training (Gradient Descent)
 
 Weights are updated using gradient descent:
 
-w = w - alpha \* gradient
+$$
+w = w - \alpha \cdot \text{gradient}
+$$
 
 where:
 
--   alpha → learning rate
--   gradient → derivative of the cost function
+* ( alpha ) → learning rate
+* gradient → derivative of the cost function
 
 Hyperparameters used:
 
-alpha = 1.99 iterations = 10000
+* ( alpha = 0.1 )
+* iterations = 1000
+
+---
 
 ## Implementation Steps
 
-1.  Load the dataset
-2.  Convert values to numeric format
-3.  Normalize the feature values
-4.  Add a bias column to the feature matrix
-5.  Initialize weights to zero
-6.  Train the model using gradient descent
-7.  Track cost and weights during training
+1. Load the dataset
+2. Convert values to numeric format
+3. Normalize the feature values
+4. Add a bias column to the feature matrix
+5. Initialize weights to zero
+6. Train the model using gradient descent
+7. Track cost and weights during training
+
+---
 
 ## Output
 
 The program prints:
 
--   initial cost
--   final cost after training
--   final learned weights
+* initial cost
+* final cost after training
+* final learned weights
+
+---
 
 ## Tools Used
 
--   Python
--   NumPy
--   Pandas
--   Matplotlib
+* Python
+* NumPy
+* Pandas
+* Matplotlib
+
+---
+## Author **Kenzy Frhat**
+ Faculty of Computers and Information — Artificial Intelligence Track
